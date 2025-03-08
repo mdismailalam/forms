@@ -1,0 +1,178 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7fafc;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+  }
+  
+  .form-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+  }
+  
+  .form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #3182ce;
+  }
+  
+  .form-title {
+    text-align: center;
+  }
+  
+  .form-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e53e3e;
+  }
+  
+  .form-subheading {
+    font-size: 16px;
+    color: #3182ce;
+  }
+  
+  .form-body {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .form-column-left,
+  .form-column-right {
+    width: 48%;
+  }
+  
+  .form-field {
+    margin-bottom: 15px;
+  }
+  
+  .form-label {
+    font-size: 14px;
+    color: #3182ce;
+    font-weight: 600;
+  }
+  
+  .form-input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #3182ce;
+    border-radius: 5px;
+  }
+  
+  .form-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .form-footer-left,
+  .form-signature-left,
+  .form-signature-right {
+    font-size: 14px;
+    color: #3182ce;
+    font-weight: 600;
+  }
+  
+  .form-download {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .form-download-btn {
+    background-color: #48bb78;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .form-download-btn:hover {
+    background-color: #38a169;
+  }
+  
+  .form-signatures {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Container that holds the image and file input */
+  .photo-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  /* Box containing the image preview and the file input */
+  .photo-upload-box {
+    position: relative;
+    width: 100%;
+    max-width: 150px;
+    /* Reduced max-width for a smaller container */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    /* Reduced padding */
+    border: 1px solid #3182ce;
+    /* Optional: Add border for clarity */
+    border-radius: 10px;
+    /* Optional: Keep rounded corners */
+  }
+  
+  /* Styling for the uploaded photo preview */
+  .photo-preview {
+    width: 100%;
+    max-width: 120px;
+    /* Reduced max-width for image preview */
+    max-height: 120px;
+    /* Reduced max-height for image preview */
+    object-fit: contain;
+    /* Ensure the image is properly scaled */
+    border-radius: 10px;
+    /* Optional: Keep rounded corners for the image */
+  }
+  
+  /* Styling for the file input */
+  .file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Text for the upload prompt */
+  .upload-text {
+    margin-top: 5px;
+    /* Reduced margin */
+    font-size: 12px;
+    /* Reduced font size */
+    text-align: center;
+  }

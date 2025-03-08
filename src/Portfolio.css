@@ -1,0 +1,296 @@
+ /* Header Styles */
+ .header {
+   position: fixed;
+   /* Fix the header at the top */
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100px;
+   background-color: #333;
+   z-index: 1000;
+   /* Ensure it's always on top */
+   padding: 10px 0;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+
+ .header-container {
+   display: flex;
+   flex-direction: row;
+   height: 100px;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 20px;
+   /* Add space on the left and right */
+ }
+
+ .logo {
+   color: white;
+   font-size: 24px;
+   font-weight: bold;
+   text-transform: uppercase;
+ }
+
+ .nav {
+   display: flex;
+   gap: 20px;
+ }
+
+ .nav-item {
+   color: white;
+   text-decoration: none;
+   font-size: 16px;
+   text-transform: capitalize;
+ }
+
+ .nav-item:hover {
+   color: #f4f4f4;
+   transition: color 0.3s ease;
+ }
+
+ /* Menu Button */
+ .menu-button {
+   display: none;
+   /* Hidden by default */
+   background: none;
+   border: none;
+   color: white;
+   font-size: 24px;
+   cursor: pointer;
+ }
+
+ /* Mobile Menu */
+ .nav.open {
+   display: block;
+ }
+
+ .admit-card-link-div {
+   width: 100%;
+   /* Full width to ensure the animation works properly */
+   overflow: hidden;
+   /* Prevent the text from overflowing the container */
+   position: relative;
+ }
+
+ .admit-card-link-container {
+   display: flex;
+   animation: scrollRightToLeft 15s linear infinite;
+ }
+
+ .admit-card-link {
+   display: inline-block;
+   white-space: nowrap;
+   font-size: 20px;
+   font-weight: bold;
+   text-decoration: none;
+   color: #e75e34;
+   padding-right: 100%;
+   /* Start off-screen */
+   margin-right: 50px;
+   /* Space between the repeated texts */
+ }
+
+ @keyframes scrollRightToLeft {
+   0% {
+     transform: translateX(-100%);
+     /* Start the text off-screen on the right */
+   }
+
+   100% {
+     transform: translateX(100%);
+     /* End the text off-screen on the left */
+   }
+ }
+
+
+ @media (max-width: 768px) {
+   .menu-button {
+     display: block;
+     /* Show on small screens */
+   }
+
+   .nav {
+     display: none;
+     /* Hide on small screens */
+     position: absolute;
+     top: 60px;
+     /* Below the header */
+     right: 20px;
+     background-color: #333;
+     padding: 10px;
+     border-radius: 5px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   }
+
+   .nav.open {
+     display: block;
+   }
+
+   .nav-item {
+     color: white;
+     padding: 10px;
+     border-bottom: 1px solid #444;
+   }
+
+   .nav-item:hover {
+     background-color: #555;
+   }
+ }
+
+ /* Adjust body content padding to prevent it from getting hidden behind the fixed header */
+ .layout {
+   padding-top: 120px;
+   /* Adjust this if the header height is different */
+ }
+
+ .carousel {
+   position: relative;
+   width: 100%;
+   height: 40vh;
+   overflow: hidden;
+ }
+
+ .carousel-inner {
+   position: relative;
+   overflow: hidden;
+ }
+
+ .carousel-slide {
+   display: none;
+   transition: opacity 1s ease;
+ }
+
+ .carousel-slide.active {
+   display: block;
+   opacity: 1;
+ }
+
+ .carousel-image {
+   width: 100%;
+   height: auto;
+ }
+
+ .carousel-prev,
+ .carousel-next {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: rgba(0, 0, 0, 0.5);
+   color: white;
+   padding: 10px;
+   border: none;
+   cursor: pointer;
+ }
+
+ .carousel-prev {
+   left: 10px;
+ }
+
+ .carousel-next {
+   right: 10px;
+ }
+
+
+ /* Main Content */
+ .main-content {
+   padding: 40px 20px;
+ }
+
+ .content-grid {
+   display: flex;
+   overflow-x: auto;
+   gap: 30px;
+ }
+
+ .feature {
+   min-width: 250px;
+   text-align: center;
+   background-color: white;
+   border-radius: 10px;
+   padding: 20px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+ }
+
+ .feature-image {
+   width: 120px;
+   height: 120px;
+   border-radius: 50%;
+   overflow: hidden;
+   margin-bottom: 20px;
+ }
+
+ .feature-image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+
+ .feature-title {
+   font-size: 18px;
+   font-weight: bold;
+   margin-bottom: 10px;
+ }
+
+ .feature-description {
+   color: #555;
+ }
+
+ /* Footer Styles */
+ .footer {
+   background-color: #333;
+   color: white;
+   padding: 40px 20px;
+ }
+
+ .footer-container {
+   display: flex;
+   justify-content: space-between;
+   gap: 30px;
+ }
+
+ .footer-section {
+   width: 25%;
+ }
+
+ .footer-section h4 {
+   font-size: 18px;
+   margin-bottom: 10px;
+ }
+
+ .footer-link {
+   color: white;
+   text-decoration: none;
+ }
+
+ .footer-link:hover {
+   color: #f4f4f4;
+ }
+
+ .newsletter {
+   display: flex;
+   gap: 10px;
+ }
+
+ .newsletter-input {
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   width: 100%;
+ }
+
+ .newsletter-button {
+   background-color: #555;
+   color: white;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+ }
+
+ .newsletter-button:hover {
+   background-color: #444;
+ }
+
+ .footer-bottom {
+   text-align: center;
+   margin-top: 30px;
+ }
